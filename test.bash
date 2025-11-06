@@ -22,6 +22,6 @@ out=$(echo | ./plus)              #なにも入力しない
 [ "$?" = 1 ]      || ng "$LINENO" #これも異常終了する
 [ "${out}" = "" ] || ng "$LINENO"
 
-[ "$res" = 0] && echo OK
+[ "$res" = 0 ] && echo OK
 
 exit $res
