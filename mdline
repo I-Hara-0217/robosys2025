@@ -4,3 +4,11 @@
 
 
 import sys
+
+def main():
+    lines = sys.stdin.readlines() #標準入力を全部読み込む
+
+    for line in lines:
+        print(line, end="")  #そのまま出力する（動作確認用）
+
+main()
