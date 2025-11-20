@@ -11,7 +11,7 @@ def main():
     for line in line:
         clean_line = line.rstrip() #改行などを消す
 
-        if clean _line == "":
+        if clean_line == "":
             continue
 
         
