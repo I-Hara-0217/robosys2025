@@ -15,7 +15,7 @@ def main():
             continue
 
         
-        print(f"- {line.rstrip()}")  #rstrip()で行末の改行を消して、頭に "- " をつけて表示する
+        print(f"- {clean_line}")  
 
 if __name__ == '__main__': #実行ガード（安全装置）
     main()
