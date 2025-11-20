@@ -8,8 +8,14 @@ import sys
 def main():
     lines = sys.stdin.readlines() #標準入力を全部読み込む
 
-    for line in lines:
-        print(line, end="")  #そのまま出力する（動作確認用）
+    for line in line:
+        clean_line = line.rstrip() #改行などを消す
+
+        if clean _line == "":
+            continue
+
+        
+        print(f"- {line.rstrip()}")  #rstrip()で行末の改行を消して、頭に "- " をつけて表示する
 
 if __name__ == '__main__': #実行ガード（安全装置）
     main()
