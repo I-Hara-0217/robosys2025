@@ -8,7 +8,7 @@ import sys
 def main():
     lines = sys.stdin.readlines() #標準入力を全部読み込む
 
-    for line in line:
+    for line in lines:
         clean_line = line.rstrip() #改行などを消す
 
         if clean_line == "":
