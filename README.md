@@ -88,7 +88,7 @@ $ cat list.txt | ./mdline >> README.md
 ## 謝辞
 
 - このパッケージのディレクトリ構成やテスト方法は、千葉工業大学 ロボットシステム学(2025)の講義資料を参考にしています。
-    - [ryuichiueda/slides_marp/robosys2025]()https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025
+    - [ryuichiueda/slides_marp/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
 
 - © 2025 Ibuki Hara
 
