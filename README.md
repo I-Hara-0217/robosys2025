@@ -7,11 +7,11 @@
 以下のコマンドを入力してください。
 
 ```
-$git clone [https://github.com/I-Hara-0217/robosys2025.git$](https://github.com/I-Hara-0217/robosys2025.git$)
+$git clone [https://github.com/I-Hara-0217/robosys2025.git$](https://github.com/I-Hara-0217/robosys2025.git)
 ```
 
 ```
-&cd robosys2025
+$cd robosys2025
 ```
 
 ## 実行例
