@@ -16,7 +16,7 @@ $cd robosys2025
 
 ## 実行例
 
-例1:文字列を入力する場合
+例1:標準入力から文字列を渡すと、行頭にハイフンをつけて出力します。
 
 入力
 
@@ -30,12 +30,11 @@ $ echo "Apple" | ./mdline
 - Apple
 ```
 
-例2:複数行入力する場合
+例2:改行を含むテキストも一行ずつリスト化します。空行は自動的にスキップされます。
 
-入力
 
 ```
-$ echo -e "Apple\nOrange\nBanana" | ./mdline
+$ echo -e "Apple\nOrange\n\nBanana" | ./mdline
 ```
 
 出力
@@ -46,29 +45,43 @@ $ echo -e "Apple\nOrange\nBanana" | ./mdline
 - Banana
 ```
 
-例3:空行を含む場合(空行はスキップされます)
+例3:-n をつけると、連番のリストに変換します。空行は自動的にスキップされます。
 
 入力
 
 ```
-$ echo -e "Apple\n\nBanana" | ./mdline
+$ echo -e "First step\nSecond step" | ./mdline -n
 ```
 
 出力
 ```
-- Apple
-- Banana
+1. First step
+2. Second step
 ```
 
-例4: ファイルの中身を変換して保存する
+例4:-c をつけると、チェックボックス形式に変換します。空行は自動的にスキップされます。
 
 入力
 
 ```
-$ cat list.txt | ./mdline > list.md
+$ echo -e "Buy milk\nWalk the dog" | ./mdline -c
 ```
 
-例5:既存のファイルに追記する
+出力
+```
+- [ ] Buy milk
+- [ ] Walk the dog
+```
+
+例5:既存のテキストファイルをMarkdownのリストに変換して保存する例です。
+
+入力
+
+```
+$ cat list.txt | ./mdline -c > shopping_list.md
+```
+
+例6:既存ファイルへの追記の例です。
 
 入力
 
@@ -80,17 +93,19 @@ $ cat list.txt | ./mdline >> README.md
 - Python
   - テスト済み: 3.7〜3.10
 
-- Ubuntu 24.04.1
+- Ubuntu 24.04.1 LTS
 
 ## ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
+
+- © 2025 Ibuki Hara
 
 ## 謝辞
 
 - このパッケージのディレクトリ構成やテスト方法は、千葉工業大学 ロボットシステム学(2025)の講義資料を参考にしています。
     - [ryuichiueda/slides_marp/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
 
-- © 2025 Ibuki Hara
+
 
  
 
