@@ -4,18 +4,28 @@
 
 
 import sys
+import argparse
 
 def main():
-    lines = sys.stdin.readlines() #標準入力を全部読み込む
+    parser = argparse.ArgumentParser(description='Markdown List Converter')
+    parser.add_argument('-n', '--number', action='store_true')
+    parser.add_argument('-c', '--check', action='store_true')
+    args = parser.parse_args()
 
-    for line in lines:
-        clean_line = line.rstrip() #改行などを消す
-
-        if clean_line == "":
+    i = 1
+    for line in sys.stdin:
+        line = line.rstrip()
+        if not line: 
             continue
 
-        
-        print(f"- {clean_line}")  
+        if args.number:
+            print(f"{i}. {line}")
+            i += 1
+        elif args.check:
+            print(f"- [ ] {line}")
+        else:
+            print(f"- {line}")
+
 
 if __name__ == '__main__': #実行ガード（安全装置）
     main()
