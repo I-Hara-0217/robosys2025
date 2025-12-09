@@ -13,7 +13,7 @@ res=0
 out=$(echo "test" | ./mdline)
 [ "${out}" = "- test" ] || ng "$LINENO"
 
-### STRANGE INPUT ###
+### MULTIBYTE INPUT ###
 out=$(echo "あ" | ./mdline)
 [ "${out}" = "- あ" ] || ng "$LINENO"
 
