@@ -9,9 +9,6 @@
 
 ```
 $git clone https://github.com/I-Hara-0217/robosys2025.git
-```
-
-```
 $cd robosys2025
 ```
 
@@ -19,28 +16,15 @@ $cd robosys2025
 
 例1:標準入力から文字列を渡すと、行頭にハイフンをつけて出力します。
 
-入力
-
 ```
 $ echo "Apple" | ./mdline
-```
-
-出力
-
-```
 - Apple
 ```
 
 例2:改行を含むテキストも一行ずつリスト化します。空行は自動的にスキップされます。
 
-
 ```
 $ echo -e "Apple\nOrange\n\nBanana" | ./mdline
-```
-
-出力
-
-```
 - Apple
 - Orange
 - Banana
@@ -48,43 +32,27 @@ $ echo -e "Apple\nOrange\n\nBanana" | ./mdline
 
 例3:-n をつけると、連番のリストに変換します。空行は自動的にスキップされます。
 
-入力
-
 ```
 $ echo -e "First step\nSecond step" | ./mdline -n
-```
-
-出力
-```
 1. First step
 2. Second step
 ```
 
 例4:-c をつけると、チェックボックス形式に変換します。空行は自動的にスキップされます。
 
-入力
-
 ```
 $ echo -e "Buy milk\nWalk the dog" | ./mdline -c
-```
-
-出力
-```
 - [ ] Buy milk
 - [ ] Walk the dog
 ```
 
 例5:既存のテキストファイルをMarkdownのリストに変換して保存する例です。
 
-入力
-
 ```
 $ cat list.txt | ./mdline -c > shopping_list.md
 ```
 
 例6:既存ファイルへの追記の例です。
-
-入力
 
 ```
 $ cat list.txt | ./mdline >> README.md
