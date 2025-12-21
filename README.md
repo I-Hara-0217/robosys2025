@@ -1,11 +1,11 @@
 # mdline
 [![test](https://github.com/I-Hara-0217/robosys2025/actions/workflows/test.yml/badge.svg)](https://github.com/I-Hara-0217/robosys2025/actions/workflows/test.yml)
 
-標準入力からテキストを読み込み、Markdownのリスト形式（行頭にハイフンなど）に変換して出力するコマンドです。
-通常の箇条書きに加え、オプションで番号付きリストやチェックボックスリストへの変換もサポートしています。
+標準入力からテキストを読み込み、Markdownのリスト形式（行頭にハイフンなど）に変換して出力するコマンドです。 通常の箇条書きに加え、オプションで番号付きリストやチェックボックスリストへの変換もサポートしています。
 
-## インストール方法
-以下のコマンドを入力してください。
+## 準備
+
+以下のコマンドを順番に実行してください。リポジトリを取り込み、作業用ディレクトリへ移動します。
 
 ```
 $git clone https://github.com/I-Hara-0217/robosys2025.git
